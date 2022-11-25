@@ -1,13 +1,14 @@
 list1 = ["1", "2", "3"]
 for i in range(len(list1)):
     list1[i] = int(list1[i])
-print(sum(list1)) 
+print("1er.metodo : ", sum(list1))
+
+print("2do.metodo : ", sum(list(map(int, list1))))
+
 
 def convert_add(*argv) -> None:
     """Converts a string to a float and adds it to the total"""
-    for i in range(len(*argv)):
-        lis[i] = int(argv[i])
+    return sum(int(arg) for arg in argv)
 
-#list1 = ["1", "2", "3"]
-print("hola")
-print(convert_add("1", "2", "3"))
+
+print("3er.metodo : ", convert_add(*list1))
